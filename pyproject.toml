@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grepcast"
+version = "0.1.0"
+description = "Local, grep-able transcript library for saved videos, talks and podcasts: SQLite FTS5 search with timestamps, local Whisper transcription or existing subtitles. Nothing uploaded."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "Aris Rhiannon" }]
+keywords = ["whisper", "transcription", "podcast", "subtitles", "sqlite", "fts5", "local-first", "speech-to-text", "search", "self-hosted"]
+dependencies = []
+
+[project.optional-dependencies]
+whisper = ["faster-whisper>=1.0"]
+
+[project.urls]
+Homepage = "https://github.com/ArisRhiannon/grepcast"
+
+[project.scripts]
+grepcast = "grepcast.cli:main"
+
+[tool.setuptools]
+packages = ["grepcast"]
+

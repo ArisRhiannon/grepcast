@@ -117,7 +117,7 @@ def hms(t):
 
 
 def media_link(path, start):
-    return Path(path).as_uri() + f"#t={int(start)}"
+    return Path(path).resolve().as_uri() + f"#t={int(start)}"
 
 
 def to_srt(segs):
